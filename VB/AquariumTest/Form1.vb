@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Data
@@ -13,13 +12,14 @@ Imports DevExpress.UnitConversion
 #End Region ' #usings
 
 Namespace AquariumTest
-	Partial Public Class Form1
-		Inherits Form
-		Public Sub New()
-			InitializeComponent()
-		End Sub
+    Partial Public Class Form1
+        Inherits Form
 
-		Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
+        Public Sub New()
+            InitializeComponent()
+        End Sub
+
+        Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
 '#Region "#tank"
 'Quantity value is a value measured in a certain unit.
 'You cannot mix different quantity values in a single expression.
@@ -44,6 +44,6 @@ Dim textEu As String = String.Format(textFormatEu, l.ToMeters().Value, w.ToMeter
 Dim msg As String = If(radioButtonUS.Checked, textUS, textEu)
 MessageBox.Show(msg)
 '#End Region ' #tank
-		End Sub
-	End Class
+        End Sub
+    End Class
 End Namespace
